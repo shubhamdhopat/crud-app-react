@@ -1,0 +1,192 @@
+/* Posts.css */
+
+.posts-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* GRID */
+
+.posts-section ol {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+
+    list-style: none;
+    padding: 0;
+}
+
+/* LIST ITEM */
+
+.posts-section li {
+    position: relative;
+    height: 100%;
+
+}
+
+/* NUMBER */
+
+.number {
+    position: absolute;
+    top: -12px;
+    left: -12px;
+
+    width: 42px;
+    height: 42px;
+
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 10;
+
+    box-shadow: 0 5px 15px rgba(59, 130, 246, 0.5);
+}
+
+/* CARD */
+
+.card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    border-radius: 20px;
+
+    padding: 1.8rem;
+
+    transition: all 0.3s ease;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    background: rgba(59, 130, 246, 0.15);
+
+    border-radius: 50%;
+
+    top: -80px;
+    right: -80px;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+
+    border-color: rgba(59, 130, 246, 0.5);
+
+    box-shadow: 0 12px 40px rgba(59, 130, 246, 0.25);
+}
+
+/* TITLE */
+
+.card p:first-child {
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    color: #60a5fa;
+
+    margin-bottom: 1rem;
+
+    line-height: 1.5;
+}
+
+/* BODY */
+
+.card p:nth-child(2) {
+    color: #d1d5db;
+
+    line-height: 1.7;
+
+    margin-bottom: 1.8rem;
+
+    font-size: 0.95rem;
+}
+
+/* BUTTONS */
+
+.btn-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.edit-btn,
+.delete-btn {
+    border: none;
+
+    padding: 0.7rem 1.4rem;
+
+    border-radius: 10px;
+
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+/* EDIT */
+
+.edit-btn {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: white;
+}
+
+.edit-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 6px 15px rgba(59, 130, 246, 0.4);
+}
+
+/* DELETE */
+
+.delete-btn {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: white;
+}
+
+.delete-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 6px 15px rgba(239, 68, 68, 0.4);
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+    .posts-section ol {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-group {
+        flex-direction: column;
+    }
+
+    .edit-btn,
+    .delete-btn {
+        width: 100%;
+    }
+}
