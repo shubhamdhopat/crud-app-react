@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { getPosts } from "../api/PostApi";
 import "./Posts.css";
 import { deletePost } from "../api/PostApi";
+import { Form } from "./Form";
+import "./Form.css";
 
 export const Posts = () => {
   const [data, setData] = useState([]);
@@ -35,35 +37,43 @@ export const Posts = () => {
   };
 
   return (
-    <section className="posts-section">
-      <ol>
-        {data.map((curElem, index) => {
-          const { id, body, title } = curElem;
+    <>
+      {/* Form Section */}
+      <section className="section-form">
+        <Form data={data} setData={setData} />
+      </section>
 
-          return (
-            <li key={id}>
-              <span className="number">{index + 1}</span>
+      {/* Posts Section */}
+      <section className="posts-section">
+        <ol>
+          {data.map((curElem, index) => {
+            const { id, body, title } = curElem;
 
-              <div className="card">
-                <div className="card-content">
-                  <p>Title: {title}</p>
-                  <p>Body: {body}</p>
+            return (
+              <li key={id}>
+                <span className="number">{index + 1}</span>
+
+                <div className="card">
+                  <div className="card-content">
+                    <p>Title: {title}</p>
+                    <p>Body: {body}</p>
+                  </div>
+
+                  <div className="btn-group">
+                    <button className="edit-btn">Edit</button>
+                    <button
+                      className="delete-btn"
+                      onClick={() => handleDeletePost(id)}
+                    >
+                      Delete
+                    </button>
+                  </div>
                 </div>
-
-                <div className="btn-group">
-                  <button className="edit-btn">Edit</button>
-                  <button
-                    className="delete-btn"
-                    onClick={() => handleDeletePost(id)}
-                  >
-                    Delete
-                  </button>
-                </div>
-              </div>
-            </li>
-          );
-        })}
-      </ol>
-    </section>
+              </li>
+            );
+          })}
+        </ol>
+      </section>
+    </>
   );
 };

@@ -1,0 +1,156 @@
+/* Form.css */
+
+.section-form {
+    width: 50%;
+    max-width: 1200px;
+
+    margin: 0 auto 3rem auto;
+}
+
+.section-form form {
+    background: rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    border-radius: 18px;
+
+    padding: 1rem 1.2rem;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+
+    display: flex;
+    align-items: center;
+
+    gap: 1rem;
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glow Effect */
+
+.section-form form::before {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    background: rgba(59, 130, 246, 0.12);
+
+    border-radius: 50%;
+
+    top: -90px;
+    right: -90px;
+}
+
+/* Form Groups */
+
+.section-form form div {
+    position: relative;
+    z-index: 2;
+}
+
+/* Inputs Container */
+
+.section-form form div:nth-child(1),
+.section-form form div:nth-child(2) {
+    flex: 1;
+}
+
+/* Remove Labels */
+
+.section-form label {
+    display: none;
+}
+
+/* Inputs */
+
+.section-form input {
+    width: 100%;
+
+    padding: 1rem 1.2rem;
+
+    border-radius: 12px;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    background: rgba(255, 255, 255, 0.06);
+
+    color: white;
+
+    font-size: 1rem;
+
+    outline: none;
+
+    transition: all 0.3s ease;
+}
+
+/* Placeholder */
+
+.section-form input::placeholder {
+    color: #9ca3af;
+}
+
+/* Focus */
+
+.section-form input:focus {
+    border-color: #3b82f6;
+
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.35);
+
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* Button Container */
+
+.section-form form div:last-child {
+    width: 140px;
+}
+
+/* Button */
+
+.section-form button {
+    width: 100%;
+
+    padding: 1rem;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+
+    color: white;
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+/* Hover */
+
+.section-form button:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+    .section-form form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .section-form form div:last-child {
+        width: 100%;
+    }
+}

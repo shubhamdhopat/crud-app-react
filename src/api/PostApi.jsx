@@ -13,3 +13,8 @@ export const getPosts = () => {
 export const deletePost = (id) => {
   return api.delete(`/posts/${id}`);
 };
+
+//post request
+export const postData = (post) => {
+  return api.post("/posts", post);
+};
