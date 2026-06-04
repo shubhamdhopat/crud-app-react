@@ -1,16 +1,68 @@
-# React + Vite
+# CRUD App with React, Vite, and Axios
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple CRUD web application built with React, Vite, and Axios. It demonstrates how to fetch, create, update, and delete posts from a REST API using React hooks and component-based architecture.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Fetch posts from a REST API
+- Display posts in a list
+- Add new posts using a form
+- Edit existing posts
+- Delete posts from the list
+- Axios for HTTP requests
 
-## React Compiler
+## Tech stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19
+- Vite
+- Axios
+- JavaScript
+- CSS
 
-## Expanding the ESLint configuration
+## Project structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- `src/main.jsx` — React entry point
+- `src/App.jsx` — Root app component
+- `src/components/Posts.jsx` — Posts list and CRUD container
+- `src/components/Form.jsx` — Add/Edit form component
+- `src/api/PostApi.jsx` — Axios API helper functions
+
+## Local setup
+
+1. Install dependencies
+
+```bash
+npm install
+```
+
+2. Start the development server
+
+```bash
+npm run dev
+```
+
+3. Open the URL shown in the terminal
+
+## Build and preview
+
+Build for production:
+
+```bash
+npm run build
+```
+
+Preview the built app locally:
+
+```bash
+npm run preview
+```
+
+## Notes
+
+- This project uses `https://jsonplaceholder.typicode.com` as the backend API.
+- The JSONPlaceholder API does not persist changes permanently.
+- The form supports both adding and editing posts.
+
+## License
+
+This project is provided as-is for learning and demo purposes.
