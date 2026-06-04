@@ -105,45 +105,45 @@ npm run preview
 
 ### 🏠 Home Page
 
-```md
+
 <img width="1224" height="790" alt="image" src="https://github.com/user-attachments/assets/dbc5571b-d6d8-4ef2-b640-9ab1bdc48fc1" />
 
-```
+
 
 ---
 
 ### ➕ Add Post
 
-```md
-<img width="768" height="102" alt="image" src="https://github.com/user-attachments/assets/68591cae-b99d-4791-a12a-7731b2759b3a" />
+
+<img width="1177" height="128" alt="image" src="https://github.com/user-attachments/assets/c4d34b94-b99d-4e45-ab08-f40a425c35a7" />
+
 <img width="1045" height="286" alt="image" src="https://github.com/user-attachments/assets/66c9679b-d9aa-41d0-b4d7-28441638c8b9" />
 
 
 
-```
+
 
 ---
 
 ### ✏️ Edit Post
 
-```md
+
 <img width="1127" height="468" alt="image" src="https://github.com/user-attachments/assets/70304567-a6a7-4ed8-a075-5910be879dde" />
 <img width="1090" height="465" alt="image" src="https://github.com/user-attachments/assets/6385de00-6eaa-41a9-9fb3-e818b52591dc" />
 
 
 
-```
+
 
 ---
 
 ### ❌ Delete Post
 
-```md
+
 <img width="1140" height="466" alt="image" src="https://github.com/user-attachments/assets/c873dc68-3bf2-4745-ad05-3e2381b3cd03" />
 <img width="1095" height="467" alt="image" src="https://github.com/user-attachments/assets/fa3f179c-7873-4b63-b0ae-86b7241b10ce" />
 
 
-```
 
 ---
 
