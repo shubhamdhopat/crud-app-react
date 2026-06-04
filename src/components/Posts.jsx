@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { getPosts } from "../api/PostApi";
+import { getPosts, deletePost } from "../api/PostApi";
 import "./Posts.css";
-import { deletePost } from "../api/PostApi";
 import { Form } from "./Form";
 import "./Form.css";
 
 export const Posts = () => {
   const [data, setData] = useState([]);
+  const [updateDataApi, setUpdateDataApi] = useState({});
 
   const getPostData = async () => {
     const res = await getPosts();
@@ -36,11 +36,19 @@ export const Posts = () => {
     }
   };
 
+  //Update Post
+  const handleUpdatePost = (curElem) => setUpdateDataApi(curElem);
+
   return (
     <>
       {/* Form Section */}
       <section className="section-form">
-        <Form data={data} setData={setData} />
+        <Form
+          data={data}
+          setData={setData}
+          updateData={updateDataApi}
+          setUpdateData={setUpdateDataApi}
+        />
       </section>
 
       {/* Posts Section */}
@@ -60,7 +68,12 @@ export const Posts = () => {
                   </div>
 
                   <div className="btn-group">
-                    <button className="edit-btn">Edit</button>
+                    <button
+                      className="edit-btn"
+                      onClick={() => handleUpdatePost(curElem)}
+                    >
+                      Edit
+                    </button>
                     <button
                       className="delete-btn"
                       onClick={() => handleDeletePost(id)}
